@@ -186,6 +186,7 @@ sources:
 
       - name: bundle_item
         description: Mapping table containing all bundle and item combinations
+        freshness:
         columns:
           - name: bundle_id
             description: Reference to the bundle table.
@@ -196,6 +197,7 @@ sources:
 
       - name: bundle
         description: Table containing all bundles possible to be used within an invoice.
+        freshness:
         columns:
           - name: id
             description: Unique identifier of the bundle.
@@ -232,6 +234,7 @@ sources:
 
       - name: credit_memo_line
         description: Table containing individual records of credit memos.
+        freshness:
         columns:
           - name: credit_memo_id
             description: Unique identifier of the credit memo record.
@@ -256,6 +259,7 @@ sources:
 
       - name: credit_memo
         description: Table containing credit memo records. A credit memo is a refund or credit of payment or part of a payment for goods or services that have been sold.
+        freshness:
         columns:
           - name: id
             description: Unique identifier for a credit memo.
@@ -308,6 +312,7 @@ sources:
 
       - name: department
         description: Table containing records representing physical locations such as stores, and sales regions.
+        freshness:
         columns:
           - name: id
             description: Unique identifier of the department.
@@ -368,6 +373,7 @@ sources:
 
       - name: estimate
         description: Table containing estimates. An estimate represents a proposal for a financial transaction from a business to a customer for goods or services proposed to be sold, including proposed pricing.
+        freshness:
         columns:
           - name: id
             description: Unique identifier of the estimate.
@@ -394,6 +400,7 @@ sources:
 
       - name: estimate_line
         description: Table containing line item records of an estimate.
+        freshness:
         columns:
           - name: estimate_id
             description: Reference to the unique estimate record.
@@ -424,6 +431,7 @@ sources:
 
       - name: invoice_linked_txn
         description: Mapping table for invoices records to respective estimate and payment objects.
+        freshness:
         columns:
           - name: invoice_id
             description: Reference to the unique invoice.
@@ -436,6 +444,7 @@ sources:
 
       - name: invoice_line
         description: Table containing individual records from invoices.
+        freshness:
         columns:
           - name: invoice_id
             description: Unique identifier of the invoice record.
@@ -472,6 +481,7 @@ sources:
 
       - name: invoice_line_bundle
         description: Table containing lines of an invoice which were bundled.
+        freshness:
         columns:
           - name: invoice_id
             description: Unique identifier of the invoice record.
@@ -498,6 +508,7 @@ sources:
 
       - name: invoice
         description: Table containing invoice records. An Invoice represents a sales form where the customer pays for a product or service later.
+        freshness:
         columns:
           - name: id
             description: Unique identifier of the invoice.
@@ -612,6 +623,7 @@ sources:
 
       - name: payment_line
         description: Table containing individual line items recorded within a payment.
+        freshness:
         columns:
           - name: payment_id
             description: Unique identifier of the payment record.
@@ -710,6 +722,7 @@ sources:
 
       - name: purchase_order_line
         description: Table containing individual line items of a transaction associated with a purchase order.
+        freshness:
         columns:
           - name: purchase_order_id
             description: Unique identifier of the purchase order record.
@@ -738,6 +751,7 @@ sources:
 
       - name: purchase_order_linked_txn
         description: Mapping table for purchase order records to respective bill and purchase objects.
+        freshness:
         columns:
           - name: purchase_order_id
             description: Reference to the unique purchase order.
@@ -752,6 +766,7 @@ sources:
 
       - name: purchase_order
         description: Table containing records of purchase orders (PO).
+        freshness:
         columns:
           - name: id
             description: Unique identifier of the purchase order.
@@ -790,6 +805,7 @@ sources:
 
       - name: refund_receipt_line
         description: Table containing individual line items of a refund transaction.
+        freshness:
         columns:
           - name: refund_id
             description: Unique identifier of the refund record.
@@ -814,6 +830,7 @@ sources:
 
       - name: refund_receipt
         description: Table containing refunds to the customer for a product or service that was provided.
+        freshness:
         columns:
           - name: id
             description: Unique identifier of the refund.
